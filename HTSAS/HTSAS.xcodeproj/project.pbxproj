@@ -14,6 +14,7 @@
 		C083C9B81B3F1088005E3CB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C083C9B71B3F1088005E3CB9 /* Images.xcassets */; };
 		C083C9BB1B3F1088005E3CB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C083C9B91B3F1088005E3CB9 /* LaunchScreen.xib */; };
 		C083C9C71B3F1088005E3CB9 /* HTSASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */; };
+		F40426E15E5E3567D1A4B1F1 /* libPods-HTSAS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		587692B3D9846C38A2619D15 /* Pods-HTSAS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTSAS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS.release.xcconfig"; sourceTree = "<group>"; };
+		59D9615097205D17922F0078 /* Pods-HTSAS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTSAS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS.debug.xcconfig"; sourceTree = "<group>"; };
 		C083C9A81B3F1088005E3CB9 /* HTSAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTSAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C083C9AC1B3F1088005E3CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C083C9AD1B3F1088005E3CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		C083C9C01B3F1088005E3CB9 /* HTSASTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTSASTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C083C9C51B3F1088005E3CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTSASTests.swift; sourceTree = "<group>"; };
+		E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTSAS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40426E15E5E3567D1A4B1F1 /* libPods-HTSAS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				C083C9AA1B3F1088005E3CB9 /* HTSAS */,
 				C083C9C31B3F1088005E3CB9 /* HTSASTests */,
 				C083C9A91B3F1088005E3CB9 /* Products */,
+				C1B89122A0AE85D42519CF9A /* Pods */,
+				E22F8E1D74B8E14A164A7B7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C1B89122A0AE85D42519CF9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59D9615097205D17922F0078 /* Pods-HTSAS.debug.xcconfig */,
+				587692B3D9846C38A2619D15 /* Pods-HTSAS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E22F8E1D74B8E14A164A7B7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C083C9CA1B3F1088005E3CB9 /* Build configuration list for PBXNativeTarget "HTSAS" */;
 			buildPhases = (
+				1C2B37D236C0343427B909D5 /* Check Pods Manifest.lock */,
 				C083C9A41B3F1088005E3CB9 /* Sources */,
 				C083C9A51B3F1088005E3CB9 /* Frameworks */,
 				C083C9A61B3F1088005E3CB9 /* Resources */,
+				4D79F73304E1047F5AB9E5F2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +236,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C2B37D236C0343427B909D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D79F73304E1047F5AB9E5F2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C083C9A41B3F1088005E3CB9 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		C083C9CB1B3F1088005E3CB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59D9615097205D17922F0078 /* Pods-HTSAS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -356,6 +416,7 @@
 		};
 		C083C9CC1B3F1088005E3CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 587692B3D9846C38A2619D15 /* Pods-HTSAS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -418,6 +479,7 @@
 				C083C9CC1B3F1088005E3CB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C083C9CD1B3F1088005E3CB9 /* Build configuration list for PBXNativeTarget "HTSASTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				C083C9CF1B3F1088005E3CB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
