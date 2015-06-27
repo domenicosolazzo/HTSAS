@@ -61,6 +61,20 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    //-MARK: Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showLesson"{
+            if let indexPath = self.tableView.indexPathForSelectedRow(){
+                let object = lessons[indexPath.row] as HTSASLesson
+                let controller = segue.destinationViewController as! LessonViewController
+                controller.detailLessonItem = object
+                controller.navigationItem.title = object.title
+            }
+            
+        }
+    }
+
 
 
 }

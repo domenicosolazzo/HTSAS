@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gIN-jy-UgI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--How To Start A Startup lessons-->
+        <!--Lessons-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HTSAS" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +51,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="How To Start A Startup lessons" id="PrK-33-aW9"/>
+                    <navigationItem key="navigationItem" title="Lessons" id="PrK-33-aW9"/>
                     <connections>
                         <outlet property="tableView" destination="LDN-Az-nt0" id="i1i-9v-EVN"/>
                     </connections>
@@ -71,14 +72,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgi-fu-T7O">
-                                <rect key="frame" x="284" y="77" width="33" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-cm-VgF">
+                                <rect key="frame" x="279" y="87" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y26-tL-2CR">
-                                <rect key="frame" x="274" y="114" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE4-0Q-wLT">
+                                <rect key="frame" x="279" y="123" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,17 +87,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="y26-tL-2CR" secondAttribute="centerX" id="C8M-lW-jTk"/>
-                            <constraint firstAttribute="centerX" secondItem="Qgi-fu-T7O" secondAttribute="centerX" constant="-0.5" id="KDo-OE-ud0"/>
-                            <constraint firstItem="y26-tL-2CR" firstAttribute="top" secondItem="Qgi-fu-T7O" secondAttribute="bottom" constant="16" id="Obp-Ak-2i1"/>
-                            <constraint firstAttribute="centerY" secondItem="Qgi-fu-T7O" secondAttribute="centerY" constant="212.5" id="Vek-Tc-cGI"/>
-                            <constraint firstAttribute="centerY" secondItem="y26-tL-2CR" secondAttribute="centerY" constant="175.5" id="XCs-am-SMd"/>
+                            <constraint firstAttribute="centerX" secondItem="uE4-0Q-wLT" secondAttribute="centerX" id="FtF-rU-MDA"/>
+                            <constraint firstAttribute="centerX" secondItem="cCi-cm-VgF" secondAttribute="centerX" id="Lpw-su-Kj9"/>
+                            <constraint firstAttribute="centerY" secondItem="uE4-0Q-wLT" secondAttribute="centerY" constant="166.5" id="Lvh-vp-yu3"/>
+                            <constraint firstAttribute="centerY" secondItem="cCi-cm-VgF" secondAttribute="centerY" constant="202.5" id="cz3-5s-DcU"/>
+                            <constraint firstItem="uE4-0Q-wLT" firstAttribute="leading" secondItem="d2n-ML-HRU" secondAttribute="leadingMargin" constant="263" id="d6Y-T0-1Fg"/>
+                            <constraint firstItem="cCi-cm-VgF" firstAttribute="top" secondItem="CQU-ii-CqH" secondAttribute="bottom" constant="23" id="f8H-fy-EfU"/>
+                            <constraint firstItem="uE4-0Q-wLT" firstAttribute="top" secondItem="cCi-cm-VgF" secondAttribute="bottom" constant="15" id="oyQ-c0-mQM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X3j-AQ-gv5"/>
                     <connections>
-                        <outlet property="lessonAuthors" destination="y26-tL-2CR" id="Wp0-ac-cCj"/>
-                        <outlet property="lessonTitle" destination="Qgi-fu-T7O" id="cZh-ED-UVm"/>
+                        <outlet property="lessonAuthors" destination="uE4-0Q-wLT" id="il6-cC-suU"/>
+                        <outlet property="lessonTitle" destination="cCi-cm-VgF" id="lDv-RI-sPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCg-6J-puw" userLabel="First Responder" sceneMemberID="firstResponder"/>
