@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gIN-jy-UgI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--How To Start A Startup lessons-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HTSAS" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LDN-Az-nt0">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lessonCell" textLabel="gl9-1x-24G" detailTextLabel="ygQ-9r-nzj" style="IBUITableViewCellStyleSubtitle" id="gis-PI-afG">
@@ -41,7 +41,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="gmg-Im-nE5" kind="show" identifier="showLesson" id="Rvy-Va-tS3"/>
+                                            <segue destination="gmg-Im-nE5" kind="show" identifier="showLesson" id="nBi-ix-mf7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -50,18 +50,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="How To Start A Startup lessons" id="PrK-33-aW9"/>
                     <connections>
                         <outlet property="tableView" destination="LDN-Az-nt0" id="i1i-9v-EVN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="301"/>
+            <point key="canvasLocation" x="2134" y="298"/>
         </scene>
-        <!--View Controller-->
+        <!--Lesson View Controller-->
         <scene sceneID="O4w-mI-Kzw">
             <objects>
-                <viewController id="gmg-Im-nE5" sceneMemberID="viewController">
+                <viewController id="gmg-Im-nE5" customClass="LessonViewController" customModule="HTSAS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CQU-ii-CqH"/>
                         <viewControllerLayoutGuide type="bottom" id="55X-3E-Cj3"/>
@@ -69,12 +70,56 @@
                     <view key="view" contentMode="scaleToFill" id="d2n-ML-HRU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgi-fu-T7O">
+                                <rect key="frame" x="284" y="77" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y26-tL-2CR">
+                                <rect key="frame" x="274" y="114" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="y26-tL-2CR" secondAttribute="centerX" id="C8M-lW-jTk"/>
+                            <constraint firstAttribute="centerX" secondItem="Qgi-fu-T7O" secondAttribute="centerX" constant="-0.5" id="KDo-OE-ud0"/>
+                            <constraint firstItem="y26-tL-2CR" firstAttribute="top" secondItem="Qgi-fu-T7O" secondAttribute="bottom" constant="16" id="Obp-Ak-2i1"/>
+                            <constraint firstAttribute="centerY" secondItem="Qgi-fu-T7O" secondAttribute="centerY" constant="212.5" id="Vek-Tc-cGI"/>
+                            <constraint firstAttribute="centerY" secondItem="y26-tL-2CR" secondAttribute="centerY" constant="175.5" id="XCs-am-SMd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="X3j-AQ-gv5"/>
+                    <connections>
+                        <outlet property="lessonAuthors" destination="y26-tL-2CR" id="Wp0-ac-cCj"/>
+                        <outlet property="lessonTitle" destination="Qgi-fu-T7O" id="cZh-ED-UVm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCg-6J-puw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522" y="70"/>
+            <point key="canvasLocation" x="2976" y="200"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RzA-1f-AnU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gIN-jy-UgI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yeP-3r-lzR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ill-as-QkQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPs-EH-ihb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="298"/>
         </scene>
     </scenes>
 </document>

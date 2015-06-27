@@ -15,6 +15,7 @@
 		C083C9BB1B3F1088005E3CB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C083C9B91B3F1088005E3CB9 /* LaunchScreen.xib */; };
 		C083C9C71B3F1088005E3CB9 /* HTSASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */; };
 		C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */; };
+		C083C9D71B3F2F35005E3CB9 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */; };
 		F40426E15E5E3567D1A4B1F1 /* libPods-HTSAS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		C083C9C51B3F1088005E3CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTSASTests.swift; sourceTree = "<group>"; };
 		C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTSASLesson.swift; sourceTree = "<group>"; };
+		C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTSAS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				C083C9AF1B3F1088005E3CB9 /* HTSAS.xcdatamodeld */,
 				C083C9AB1B3F1088005E3CB9 /* Supporting Files */,
 				C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */,
+				C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */,
 			);
 			path = HTSAS;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				C083C9B31B3F1088005E3CB9 /* ViewController.swift in Sources */,
 				C083C9AE1B3F1088005E3CB9 /* AppDelegate.swift in Sources */,
 				C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */,
+				C083C9D71B3F2F35005E3CB9 /* LessonViewController.swift in Sources */,
 				C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
