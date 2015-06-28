@@ -28,7 +28,7 @@ public class HTSASLesson:NSObject{
         self.init()
         self.title = title
         self.authors = authors
-        self.videoIdentifier = videoUrl
+        self.videoIdentifier = videoIdentifier
         self.transcripts = transcripts
     }
     
