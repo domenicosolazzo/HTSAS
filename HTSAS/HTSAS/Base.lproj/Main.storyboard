@@ -122,11 +122,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X3j-AQ-gv5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="xEP-P1-JRc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="xEP-P1-JRc">
+                            <connections>
+                                <action selector="playVideo:" destination="gmg-Im-nE5" id="S6l-Qk-628"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lessonAuthors" destination="uE4-0Q-wLT" id="il6-cC-suU"/>
                         <outlet property="lessonTitle" destination="cCi-cm-VgF" id="lDv-RI-sPS"/>
+                        <outlet property="tableView" destination="Ohg-4O-gyI" id="Om4-AG-oro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCg-6J-puw" userLabel="First Responder" sceneMemberID="firstResponder"/>
