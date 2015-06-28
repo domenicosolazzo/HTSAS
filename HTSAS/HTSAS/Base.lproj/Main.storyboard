@@ -73,27 +73,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-cm-VgF">
-                                <rect key="frame" x="279" y="87" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="72" width="35" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE4-0Q-wLT">
-                                <rect key="frame" x="279" y="123" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="94" width="25" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="uE4-0Q-wLT" secondAttribute="centerX" id="FtF-rU-MDA"/>
-                            <constraint firstAttribute="centerX" secondItem="cCi-cm-VgF" secondAttribute="centerX" id="Lpw-su-Kj9"/>
-                            <constraint firstAttribute="centerY" secondItem="uE4-0Q-wLT" secondAttribute="centerY" constant="166.5" id="Lvh-vp-yu3"/>
-                            <constraint firstAttribute="centerY" secondItem="cCi-cm-VgF" secondAttribute="centerY" constant="202.5" id="cz3-5s-DcU"/>
-                            <constraint firstItem="uE4-0Q-wLT" firstAttribute="leading" secondItem="d2n-ML-HRU" secondAttribute="leadingMargin" constant="263" id="d6Y-T0-1Fg"/>
-                            <constraint firstItem="cCi-cm-VgF" firstAttribute="top" secondItem="CQU-ii-CqH" secondAttribute="bottom" constant="23" id="f8H-fy-EfU"/>
-                            <constraint firstItem="uE4-0Q-wLT" firstAttribute="top" secondItem="cCi-cm-VgF" secondAttribute="bottom" constant="15" id="oyQ-c0-mQM"/>
+                            <constraint firstItem="cCi-cm-VgF" firstAttribute="height" secondItem="uE4-0Q-wLT" secondAttribute="height" id="AEd-TH-Emd"/>
+                            <constraint firstItem="cCi-cm-VgF" firstAttribute="leading" secondItem="d2n-ML-HRU" secondAttribute="leadingMargin" id="Od2-dr-Iez"/>
+                            <constraint firstItem="uE4-0Q-wLT" firstAttribute="top" secondItem="cCi-cm-VgF" secondAttribute="bottom" constant="5" id="YD5-2H-xz0"/>
+                            <constraint firstItem="uE4-0Q-wLT" firstAttribute="leading" secondItem="d2n-ML-HRU" secondAttribute="leadingMargin" id="Yrx-M1-uhU"/>
+                            <constraint firstItem="cCi-cm-VgF" firstAttribute="top" secondItem="CQU-ii-CqH" secondAttribute="bottom" constant="8" id="rgX-BU-Big"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X3j-AQ-gv5"/>
