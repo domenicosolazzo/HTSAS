@@ -6,6 +6,7 @@ use_frameworks!
 target 'HTSAS' do
 pod "AFNetworking", "~> 2.0"
 pod "XCDYouTubeKit", "~> 2.2.0"
+pod "JSONJoy-Swift", "~> 0.9.1"
 end
 
 target 'HTSASTests' do
