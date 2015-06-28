@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        lessons.append(HTSASLesson(title: "How to Start a Startup", authors: "Sam Altman, Dustin Moskovitz"))
+        lessons.append(HTSASLesson(title: "How to Start a Startup", authors: "Sam Altman, Dustin Moskovitz", videoUrl:"https://www.youtube.com/watch?v=CBYhVcO4WgI", transcripts:[]))
         lessons.append(HTSASLesson(title: "Team and Execution", authors: "Sam Altman"))
         lessons.append(HTSASLesson(title: "Before the Startup", authors: "Paul Graham"))
         lessons.append(HTSASLesson(title: "Building Product, Talking Users and Growing", authors: "Adora Cheung"))

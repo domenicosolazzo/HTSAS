@@ -94,7 +94,9 @@
                             <constraint firstItem="cCi-cm-VgF" firstAttribute="top" secondItem="CQU-ii-CqH" secondAttribute="bottom" constant="8" id="rgX-BU-Big"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="X3j-AQ-gv5"/>
+                    <navigationItem key="navigationItem" id="X3j-AQ-gv5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="xEP-P1-JRc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lessonAuthors" destination="uE4-0Q-wLT" id="il6-cC-suU"/>
                         <outlet property="lessonTitle" destination="cCi-cm-VgF" id="lDv-RI-sPS"/>
