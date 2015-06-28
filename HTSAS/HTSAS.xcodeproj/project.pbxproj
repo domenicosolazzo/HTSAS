@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		367A44301C593E344CBECC58 /* Pods_HTSAS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069764437B362010BCFA6CB1 /* Pods_HTSAS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C083C9AE1B3F1088005E3CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9AD1B3F1088005E3CB9 /* AppDelegate.swift */; };
 		C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C083C9AF1B3F1088005E3CB9 /* HTSAS.xcdatamodeld */; };
 		C083C9B31B3F1088005E3CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9B21B3F1088005E3CB9 /* ViewController.swift */; };
@@ -16,7 +17,7 @@
 		C083C9C71B3F1088005E3CB9 /* HTSASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */; };
 		C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */; };
 		C083C9D71B3F2F35005E3CB9 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */; };
-		F40426E15E5E3567D1A4B1F1 /* libPods-HTSAS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */; };
+		C083C9D91B402F3B005E3CB9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C083C9D81B402F3B005E3CB9 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		069764437B362010BCFA6CB1 /* Pods_HTSAS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTSAS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		587692B3D9846C38A2619D15 /* Pods-HTSAS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTSAS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS.release.xcconfig"; sourceTree = "<group>"; };
 		59D9615097205D17922F0078 /* Pods-HTSAS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTSAS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS.debug.xcconfig"; sourceTree = "<group>"; };
 		C083C9A81B3F1088005E3CB9 /* HTSAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTSAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +47,8 @@
 		C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTSASTests.swift; sourceTree = "<group>"; };
 		C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTSASLesson.swift; sourceTree = "<group>"; };
 		C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
-		E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HTSAS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C083C9D81B402F3B005E3CB9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C083C9DA1B403E04005E3CB9 /* HTSAS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTSAS-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40426E15E5E3567D1A4B1F1 /* libPods-HTSAS.a in Frameworks */,
+				367A44301C593E344CBECC58 /* Pods_HTSAS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 		C083C99F1B3F1088005E3CB9 = {
 			isa = PBXGroup;
 			children = (
+				C083C9D81B402F3B005E3CB9 /* Podfile */,
 				C083C9AA1B3F1088005E3CB9 /* HTSAS */,
 				C083C9C31B3F1088005E3CB9 /* HTSASTests */,
 				C083C9A91B3F1088005E3CB9 /* Products */,
@@ -99,6 +103,7 @@
 				C083C9AB1B3F1088005E3CB9 /* Supporting Files */,
 				C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */,
 				C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */,
+				C083C9DA1B403E04005E3CB9 /* HTSAS-Bridging-Header.h */,
 			);
 			path = HTSAS;
 			sourceTree = "<group>";
@@ -140,7 +145,7 @@
 		E22F8E1D74B8E14A164A7B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E90BF4A298E1EB66702501B0 /* libPods-HTSAS.a */,
+				069764437B362010BCFA6CB1 /* Pods_HTSAS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				C083C9A51B3F1088005E3CB9 /* Frameworks */,
 				C083C9A61B3F1088005E3CB9 /* Resources */,
 				4D79F73304E1047F5AB9E5F2 /* Copy Pods Resources */,
+				CC01B72B58F3C894C6942CF0 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +236,7 @@
 			files = (
 				C083C9B61B3F1088005E3CB9 /* Main.storyboard in Resources */,
 				C083C9BB1B3F1088005E3CB9 /* LaunchScreen.xib in Resources */,
+				C083C9D91B402F3B005E3CB9 /* Podfile in Resources */,
 				C083C9B81B3F1088005E3CB9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +279,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC01B72B58F3C894C6942CF0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -415,10 +437,13 @@
 			baseConfigurationReference = 59D9615097205D17922F0078 /* Pods-HTSAS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HTSAS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HTSAS/HTSAS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -427,10 +452,12 @@
 			baseConfigurationReference = 587692B3D9846C38A2619D15 /* Pods-HTSAS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HTSAS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HTSAS/HTSAS-Bridging-Header.h";
 			};
 			name = Release;
 		};
