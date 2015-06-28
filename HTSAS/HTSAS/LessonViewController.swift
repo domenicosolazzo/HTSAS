@@ -14,7 +14,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
 
     private var theTitle: String = "ciao"
     private var authors: String = "ciao"
-    private var videoUrl: String = ""
+    private var videoIdentifier: String = ""
     private var transcripts = [String]()
     
     @IBOutlet weak var lessonTitle: UILabel!
@@ -47,7 +47,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
             self.theTitle = detail.title
             self.authors = detail.authors
             self.transcripts = detail.transcripts
-            self.videoUrl = detail.videoUrl
+            self.videoIdentifier = detail.videoIdentifier
         }
     }
     
@@ -73,20 +73,8 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     
     
     //- MARK: Video player
- 
-    
-    func videoFilePath() -> NSURL?{
-        println(self.videoUrl)
-        let url = NSURL(string: self.videoUrl)
-        return url
-    }
-    
     func startPlayingVideo(){
-        
-        let url = self.videoFilePath()
-        var videoPlayerViewController: XCDYouTubeVideoPlayerViewController = XCDYouTubeVideoPlayerViewController(videoIdentifier:"CBYhVcO4WgI")
+        var videoPlayerViewController: XCDYouTubeVideoPlayerViewController = XCDYouTubeVideoPlayerViewController(videoIdentifier:self.videoIdentifier)
         self.presentMoviePlayerViewControllerAnimated(videoPlayerViewController)
-        //videoPlayer.loadVideoURL(url!)
-        
     }
 }
