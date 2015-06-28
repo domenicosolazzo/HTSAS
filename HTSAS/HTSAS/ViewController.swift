@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.readJson()
         // Do any additional setup after loading the view, typically from a nib.
         lessons.append(HTSASLesson(title: "How to Start a Startup", authors: "Sam Altman, Dustin Moskovitz", videoIdentifier:"CBYhVcO4WgI", transcripts:["bdsggssagasGSA", "fsaafsasas ffsaafs fafsafssafsfasfasfasaf"]))
         lessons.append(HTSASLesson(title: "Team and Execution", authors: "Sam Altman", videoIdentifier:"CVfnkM44Urs", transcripts:[]))
@@ -43,6 +44,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func readJson(filename:String, ofType:String,  inDirectory: String) -> AnyObject?{
+        let thisBundle: NSBundle  = NSBundle(forClass: self.classForCoder)
+        println(thisBundle)
+        let path = thisBundle.pathForResource(filename, ofType: ofType, inDirectory: inDirectory)
+        println(path)
+        let jsonData: AnyObject? = NSData.dataWithContentsOfMappedFile(path!)
+        //var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData! as! NSData, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+        //println(jsonResult)
+        return jsonData
     }
     
     //-MARK: TableViewDataSource
