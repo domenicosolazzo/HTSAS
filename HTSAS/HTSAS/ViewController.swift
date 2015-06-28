@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JSONJoy
 
 class ViewController: UIViewController, UITableViewDataSource {
 
@@ -15,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.readJson()
+        self.readJson("1", ofType: "json", inDirectory: "Transcripts/HTSAS")
         // Do any additional setup after loading the view, typically from a nib.
         lessons.append(HTSASLesson(title: "How to Start a Startup", authors: "Sam Altman, Dustin Moskovitz", videoIdentifier:"CBYhVcO4WgI", transcripts:["bdsggssagasGSA", "fsaafsasas ffsaafs fafsafssafsfasfasfasaf"]))
         lessons.append(HTSASLesson(title: "Team and Execution", authors: "Sam Altman", videoIdentifier:"CVfnkM44Urs", transcripts:[]))
@@ -52,8 +53,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         let path = thisBundle.pathForResource(filename, ofType: ofType, inDirectory: inDirectory)
         println(path)
         let jsonData: AnyObject? = NSData.dataWithContentsOfMappedFile(path!)
+        println(jsonData)
         //var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData! as! NSData, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        //println(jsonResult)
+        var decodedData = JSONDecoder(jsonData!)
+        var lesson = Lesson(decodedData)
+        println(lesson.youtubeID)
+        println(lesson.transcripts![0].caption)
+        println(decodedData.error)
+        
+        
         return jsonData
     }
     

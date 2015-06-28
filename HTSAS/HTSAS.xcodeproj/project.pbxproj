@@ -19,6 +19,7 @@
 		C083C9D71B3F2F35005E3CB9 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */; };
 		C083C9D91B402F3B005E3CB9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C083C9D81B402F3B005E3CB9 /* Podfile */; };
 		C083C9E51B406453005E3CB9 /* Transcripts in Resources */ = {isa = PBXBuildFile; fileRef = C083C9E41B406453005E3CB9 /* Transcripts */; };
+		C083C9E91B406635005E3CB9 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9E81B406635005E3CB9 /* LessonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C083C9D81B402F3B005E3CB9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C083C9DA1B403E04005E3CB9 /* HTSAS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTSAS-Bridging-Header.h"; sourceTree = "<group>"; };
 		C083C9E41B406453005E3CB9 /* Transcripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Transcripts; sourceTree = "<group>"; };
+		C083C9E81B406635005E3CB9 /* LessonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LessonModel.swift; path = Models/LessonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		C083C9AA1B3F1088005E3CB9 /* HTSAS */ = {
 			isa = PBXGroup;
 			children = (
+				C083C9E61B4065B9005E3CB9 /* Models */,
 				C083C9E41B406453005E3CB9 /* Transcripts */,
 				C083C9AD1B3F1088005E3CB9 /* AppDelegate.swift */,
 				C083C9B21B3F1088005E3CB9 /* ViewController.swift */,
@@ -134,6 +137,14 @@
 				C083C9C51B3F1088005E3CB9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C083C9E61B4065B9005E3CB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C083C9E81B406635005E3CB9 /* LessonModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C1B89122A0AE85D42519CF9A /* Pods */ = {
@@ -312,6 +323,7 @@
 				C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */,
 				C083C9D71B3F2F35005E3CB9 /* LessonViewController.swift in Sources */,
 				C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */,
+				C083C9E91B406635005E3CB9 /* LessonModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
