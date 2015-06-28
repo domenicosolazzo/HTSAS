@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class LessonViewController: UIViewController, UITableViewDataSource {
 
@@ -14,6 +15,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     private var authors: String = "ciao"
     private var videoUrl: String = ""
     private var transcripts = [String]()
+    private var moviePlayer: MPMoviePlayerController?
     
     @IBOutlet weak var lessonTitle: UILabel!
     @IBOutlet weak var lessonAuthors: UILabel!
@@ -50,6 +52,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func playVideo(sender: AnyObject) {
+        self.startPlayingVideo()
     }
     
     //-MARK: UITableViewDataSource
@@ -66,5 +69,105 @@ class LessonViewController: UIViewController, UITableViewDataSource {
         
         cell.textLabel!.text = transcripts[indexPath.row]
         return cell
+    }
+    
+    
+    //- MARK: Video player
+    func stopPlayingVideo() {
+        
+        if let player = moviePlayer{
+            NSNotificationCenter.defaultCenter().removeObserver(self)
+            player.stop()
+            player.view.removeFromSuperview()
+        }
+        
+    }
+    
+    func videoHasFinishedPlaying(notification: NSNotification){
+        
+        println("Video finished playing")
+        
+        /* Find out what the reason was for the player to stop */
+        let reason =
+        notification.userInfo![MPMoviePlayerPlaybackDidFinishReasonUserInfoKey]
+            as! NSNumber?
+        
+        if let theReason = reason{
+            
+            let reasonValue = MPMovieFinishReason(rawValue: theReason.integerValue)
+            
+            switch reasonValue!{
+            case .PlaybackEnded:
+                /* The movie ended normally */
+                println("Playback Ended")
+            case .PlaybackError:
+                /* An error happened and the movie ended */
+                println("Error happened")
+            case .UserExited:
+                /* The user exited the player */
+                println("User exited")
+            default:
+                println("Another event happened")
+            }
+            
+            println("Finish Reason = \(theReason)")
+            stopPlayingVideo()
+        }
+        
+    }
+    
+    func videoFilePath() -> NSURL?{
+        println(self.videoUrl)
+        let url = NSURL(string: self.videoUrl)
+        return url
+    }
+    
+    func videoStarted(notification:NSNotification){
+        println("Started...")
+        println("User info: \(notification.userInfo!)")
+    }
+    
+    func startPlayingVideo(){
+        
+        let url = self.videoFilePath()
+        
+        /* If we have already created a movie player before,
+        let's try to stop it */
+        if let player = moviePlayer{
+            stopPlayingVideo()
+        }
+        
+        /* Now create a new movie player using the URL */
+        moviePlayer = MPMoviePlayerController(contentURL: url)
+        
+        if let player = moviePlayer{
+            
+            /* Listen for the notification that the movie player sends us
+            whenever it finishes playing */
+            NSNotificationCenter.defaultCenter().addObserver(self,
+                selector: "videoHasFinishedPlaying:",
+                name: MPMoviePlayerPlaybackDidFinishNotification,
+                object: nil)
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "videoStarted:", name: MPMoviePlayerNowPlayingMovieDidChangeNotification, object: nil)
+            
+            println("Successfully instantiated the movie player")
+            
+            /* Scale the movie player to fit the aspect ratio */
+            player.scalingMode = .AspectFit
+            
+            view.addSubview(player.view)
+            
+            player.setFullscreen(true, animated: true)
+            
+            /* Let's start playing the video in full screen mode */
+            player.prepareToPlay()
+            
+            player.play()
+            
+        } else {
+            println("Failed to instantiate the movie player")
+        }
+        
     }
 }
