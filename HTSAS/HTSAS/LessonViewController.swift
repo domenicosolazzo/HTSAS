@@ -15,11 +15,15 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     private var theTitle: String = "ciao"
     private var authors: String = "ciao"
     private var videoIdentifier: String = ""
-    private var transcripts = [String]()
+    private var transcripts = [LessonTranscript]()
     
     @IBOutlet weak var lessonTitle: UILabel!
     @IBOutlet weak var lessonAuthors: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
         self.lessonAuthors.text = authors
     }
     
-    var detailLessonItem: AnyObject? {
+    var detailLessonItem: Lesson? {
         didSet {
             // Update the view.
             self.configureView()
@@ -40,14 +44,14 @@ class LessonViewController: UIViewController, UITableViewDataSource {
         
         
         // Update the user interface for the detail item.
-        if let detail: HTSASLesson = self.detailLessonItem as? HTSASLesson {
+        if let detail: Lesson = self.detailLessonItem {
             if self.lessonTitle == nil{
                 self.lessonTitle = UILabel()
             }
-            self.theTitle = detail.title
-            self.authors = detail.authors
-            self.transcripts = detail.transcripts
-            self.videoIdentifier = detail.videoIdentifier
+            self.theTitle = detail.title!
+            self.authors = detail.authors!
+            self.transcripts = detail.transcripts!
+            self.videoIdentifier = detail.youtubeID!
         }
     }
     
@@ -67,7 +71,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("transcriptCell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel!.text = transcripts[indexPath.row]
+        //cell.textLabel!.text = transcripts[indexPath.row]
         return cell
     }
     

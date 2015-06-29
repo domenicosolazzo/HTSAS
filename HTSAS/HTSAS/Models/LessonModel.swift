@@ -28,12 +28,17 @@ struct Lesson {
     var youtubeID: String?
     var authors: String?
     var title: String?
+    var id: Int?
     init() {
         
     }
     
+    init(data:AnyObject){
+        self.init(JSONDecoder(data))
+    }
+    
     init(_ decoder: JSONDecoder) {
-        println(decoder["y_id"].string)
+        id = decoder["id"].integer
         youtubeID = decoder["y_id"].string
         authors = decoder["authors"].string
         title = decoder["title"].string
@@ -44,4 +49,25 @@ struct Lesson {
             }
         }
     }
+}
+
+struct Lessons{
+    var lessons: [Int:Lesson]
+    
+    init(){
+        lessons = [Int:Lesson]()
+    }
+    
+    mutating func append(lesson:Lesson){
+        lessons.updateValue(lesson, forKey: lesson.id!)
+    }
+    
+    subscript(index:Int) -> Lesson?{
+        return lessons[index]
+    }
+    
+    func count() -> Int{
+        return lessons.count
+    }
+    
 }

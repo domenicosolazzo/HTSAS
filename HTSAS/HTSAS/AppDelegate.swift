@@ -13,10 +13,11 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var lessons: Lessons = Lessons()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.loadData()
         return true
     }
 
@@ -44,6 +45,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    // MARK: - Load data
+    func loadData(){
+        for index in 1...20 {
+            var lesson = self.readJson(String(index), ofType: "json", inDirectory: "Transcripts/HTSAS")
+            lessons.append(lesson)
+        }
+    }
+    
+    func readJson(filename:String, ofType:String,  inDirectory: String) -> Lesson{
+        let thisBundle: NSBundle  = NSBundle(forClass: self.classForCoder)
+        let path = thisBundle.pathForResource(filename, ofType: ofType, inDirectory: inDirectory)
+        let jsonData: AnyObject? = NSData.dataWithContentsOfMappedFile(path!)
+        var lesson = Lesson(data: jsonData!)
+        return lesson
+    }
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
