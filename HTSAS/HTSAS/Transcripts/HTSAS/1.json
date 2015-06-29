@@ -7,7 +7,11 @@
         {
             "author": "Sam Altman",
             "time": "1:00",
-            "caption": "Lalalalala"
+            "caption": "We have founded 725 companies"
+        },
+        {   "author": "Sam Altman",
+            "time": "",
+            "caption": "All of the advice in this class is geared towards people starting a business where the goal is hyper growth and eventually building a very large company."
         }
     ]
 }

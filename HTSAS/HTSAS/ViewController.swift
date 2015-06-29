@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     //-MARK: TableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lessons!.count()
+        return lessons!.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -37,7 +37,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("lessonCell", forIndexPath: indexPath) as! UITableViewCell
         
-        println(indexPath.row + 1)
         var data: Lesson = lessons[indexPath.row + 1]!
         cell.textLabel!.text = data.title
         cell.detailTextLabel!.text = data.authors

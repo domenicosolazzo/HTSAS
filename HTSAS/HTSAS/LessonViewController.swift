@@ -10,7 +10,7 @@ import UIKit
 import MediaPlayer
 import XCDYouTubeKit
 
-class LessonViewController: UIViewController, UITableViewDataSource {
+class LessonViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     private var theTitle: String = "ciao"
     private var authors: String = "ciao"
@@ -27,17 +27,24 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        self.configureTableView()
+        self.tableView.dataSource = self
         
         self.lessonTitle.text = theTitle
         self.lessonAuthors.text = authors
     }
+    
     
     var detailLessonItem: Lesson? {
         didSet {
             // Update the view.
             self.configureView()
         }
+    }
+    
+    func configureTableView() {
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 160.0
     }
     
     func configureView() {
@@ -51,6 +58,7 @@ class LessonViewController: UIViewController, UITableViewDataSource {
             self.theTitle = detail.title!
             self.authors = detail.authors!
             self.transcripts = detail.transcripts!
+            println(self.transcripts)
             self.videoIdentifier = detail.youtubeID!
         }
     }
@@ -69,10 +77,24 @@ class LessonViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("transcriptCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("transcriptCell", forIndexPath: indexPath) as! TranscriptCell
         
-        //cell.textLabel!.text = transcripts[indexPath.row]
+        var data: LessonTranscript = self.transcripts[indexPath.row]
+        cell.captionLabel.text = data.caption
+        cell.subtitleLabel.text = data.author
         return cell
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if isLandscapeOrientation() {
+            return 120.0
+        } else {
+            return 155.0
+        }
+    }
+    
+    func isLandscapeOrientation() -> Bool {
+        return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
     }
     
     

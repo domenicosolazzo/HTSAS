@@ -52,22 +52,29 @@ struct Lesson {
 }
 
 struct Lessons{
-    var lessons: [Int:Lesson]
+    var lessons: [Lesson]
     
     init(){
-        lessons = [Int:Lesson]()
+        lessons = [Lesson]()
     }
     
     mutating func append(lesson:Lesson){
-        lessons.updateValue(lesson, forKey: lesson.id!)
+        lessons.append(lesson)
     }
     
     subscript(index:Int) -> Lesson?{
-        return lessons[index]
+        var result: Lesson?
+        var filteredLessons = lessons.filter{ $0.id! == index }
+        if filteredLessons.count > 0{
+            result = filteredLessons[0]
+        }
+        return result
     }
     
-    func count() -> Int{
-        return lessons.count
+    var count: Int{
+        get{
+            return lessons.count
+        }
     }
     
 }
