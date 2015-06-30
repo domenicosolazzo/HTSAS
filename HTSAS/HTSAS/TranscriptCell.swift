@@ -11,14 +11,4 @@ import UIKit
 class TranscriptCell: UITableViewCell {
     @IBOutlet var captionLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        self.updateConstraintsIfNeeded()
-        self.layoutIfNeeded()
-        
-        self.captionLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.captionLabel.frame)
-    }
-    
 }

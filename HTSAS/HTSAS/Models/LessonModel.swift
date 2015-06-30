@@ -10,7 +10,6 @@ import JSONJoy
 
 struct LessonTranscript {
     var author: String?
-    var time: String?
     var caption: String?
     init() {
         
@@ -18,7 +17,6 @@ struct LessonTranscript {
     
     init(_ decoder: JSONDecoder) {
         author = decoder["author"].string
-        time = decoder["time"].string
         caption = decoder["caption"].string
     }
 }

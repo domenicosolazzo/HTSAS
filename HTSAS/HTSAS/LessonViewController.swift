@@ -44,7 +44,7 @@ class LessonViewController: UIViewController, UITableViewDataSource, UITableView
     
     func configureTableView() {
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 160.0
+        self.tableView.estimatedRowHeight = 80.0
     }
     
     func configureView() {
@@ -80,9 +80,32 @@ class LessonViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("transcriptCell", forIndexPath: indexPath) as! TranscriptCell
         
         var data: LessonTranscript = self.transcripts[indexPath.row]
+        
+        let font = UIFont(name: "HelveticaNeue", size: 15.0)
+        cell.captionLabel.font = font
+        cell.captionLabel.sizeToFit()
+        cell.captionLabel.numberOfLines = 0
         cell.captionLabel.text = data.caption
         cell.subtitleLabel.text = data.author
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        var height:CGFloat = self.calculateHeightForString(self.transcripts[indexPath.row].caption!)
+        return height + 70.0
+    }
+    
+    func calculateHeightForString(inString:String) -> CGFloat
+    {
+        var messageString = inString
+        let font: UIFont? = UIFont(name: "HelveticaNeue", size: 15.0)
+        var attributes = [UIFont(): font!]
+        var attrString:NSAttributedString? = NSAttributedString(string: messageString, attributes: attributes)
+        var rect:CGRect = attrString!.boundingRectWithSize(CGSizeMake(300.0,CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context:nil )
+        var requredSize:CGRect = rect
+        return requredSize.height  //to include button's in your tableview
+        
     }
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
