@@ -6,12 +6,67 @@
     "transcripts":[
         {
             "author": "Sam Altman",
-            "time": "1:00",
             "caption": "We have founded 725 companies"
         },
         {   "author": "Sam Altman",
-            "time": "",
             "caption": "All of the advice in this class is geared towards people starting a business where the goal is hyper growth and eventually building a very large company."
-        }
+        },
+        {
+            "author": "Sam Altman",
+            "caption": "So the four areas: You need a great idea, a great product, a great team, and great execution. These overlap somewhat, but I'm going to have to talk about them somewhat individually to make it make sense."
+        },
+        {
+            "author": "Sam Altman",
+            "caption": "The outcome is something like idea x product x execution x team x luck, where luck is a random number between zero and ten thousand."
+        },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "You should never start a startup just for the sake of doing so."
+                   },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "There are much easier ways to become rich and everyone who starts a startup always says, always, that they couldn't have imagined how hard and painful it was going to be."
+                   },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "You should only start a startup if you feel compelled by a particular problem and that you think starting a company is the best way to solve it."
+                   },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "The first of the four areas: a great idea. It's become popular in recent years to say that the idea doesn't matter."
+                   },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "Great execution is at least ten times as important and a hundred times harder than a great idea."
+                   },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "The definition of the idea, as we talk about it, is very broad. It includes the size and the growth of the market, the growth strategy for the company, the defensibility strategy, and so on."
+                   },
+                   {
+                    "author":"Sam Altman",
+                    "caption": "You need to think through all these things, not just the product. If it works out, you're going to be working on this for ten years so it's worth some real up front time to think through the up front value and the defensibility of the business."
+                   },
+                   {
+                   "author": "Sam Altman",
+                   "caption": "When you're evaluating an idea, you need to think through all these things, not just the product. If it works out, you're going to be working on this for ten years so it's worth some real up front time to think through the up front value and the defensibility of the business."
+                   },
+                   {
+                    "author": "Sam Altman",
+                    "caption": "Another thing we see that founders get wrong all the time is that someday you need to build a business that is difficult to replicate. This is an important part of a good idea."
+                   },
+                   {
+                    "author": "Sam Altman",
+                    "caption": " Wait to start a startup until you come up with an idea you feel compelled to explore."
+                   },
+                   {
+                    "author": "Sam Altman",
+                    "caption": "If you have several ideas, work on the one that you think about most often when you're not trying to think about work."
+                   }
+                   
+                   
+                   
+                   
+
     ]
 }
