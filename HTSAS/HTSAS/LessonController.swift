@@ -81,14 +81,24 @@ class LessonController: UITableViewController {
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         
-        let delete = UITableViewRowAction(style: .Normal, title: "Save it!") { action, index in
-            println("favourite")
+        let delete = UITableViewRowAction(style: .Normal, title: "Share") { action, index in
+            println("share")
+            tableView.setEditing(false, animated: true)
         }
-       
         
-        let done = UITableViewRowAction(style: .Default, title: "Share") { action, index in
-            println("Share")
+        delete.backgroundColor = UIColor.grayColor()
+        var effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        
+        var vibracy = UIVibrancyEffect(forBlurEffect: effect)
+        delete.backgroundEffect = effect
+        let done = UITableViewRowAction(style: .Normal, title: "Save") {action, index in
+            println("save")
+            action.backgroundColor = UIColor(red: 2.0/255.0, green: 192.0/255.0, blue: 99.0/255.0, alpha: 1.0)
+
+            tableView.setEditing(false, animated: true)
         }
+        
+        done.backgroundColor = UIColor(red: 253.0/255.0, green: 92.0/255.0, blue: 99.0/255.0, alpha: 1.0)
         return [delete, done]
     }
     
