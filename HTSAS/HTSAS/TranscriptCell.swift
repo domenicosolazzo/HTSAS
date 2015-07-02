@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class TranscriptCell: UITableViewCell {
     @IBOutlet var captionLabel: UILabel!

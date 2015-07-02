@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		367A44301C593E344CBECC58 /* Pods_HTSAS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069764437B362010BCFA6CB1 /* Pods_HTSAS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C06256701B44822100D21C71 /* LessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062566F1B44822100D21C71 /* LessonController.swift */; };
 		C083C9AE1B3F1088005E3CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9AD1B3F1088005E3CB9 /* AppDelegate.swift */; };
 		C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C083C9AF1B3F1088005E3CB9 /* HTSAS.xcdatamodeld */; };
 		C083C9B31B3F1088005E3CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9B21B3F1088005E3CB9 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		069764437B362010BCFA6CB1 /* Pods_HTSAS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTSAS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		587692B3D9846C38A2619D15 /* Pods-HTSAS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTSAS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS.release.xcconfig"; sourceTree = "<group>"; };
 		59D9615097205D17922F0078 /* Pods-HTSAS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTSAS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTSAS/Pods-HTSAS.debug.xcconfig"; sourceTree = "<group>"; };
+		C062566F1B44822100D21C71 /* LessonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonController.swift; sourceTree = "<group>"; };
 		C083C9A81B3F1088005E3CB9 /* HTSAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTSAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C083C9AC1B3F1088005E3CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C083C9AD1B3F1088005E3CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				C083C9D61B3F2F35005E3CB9 /* LessonViewController.swift */,
 				C083C9DA1B403E04005E3CB9 /* HTSAS-Bridging-Header.h */,
 				C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */,
+				C062566F1B44822100D21C71 /* LessonController.swift */,
 			);
 			path = HTSAS;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C083C9B31B3F1088005E3CB9 /* ViewController.swift in Sources */,
+				C06256701B44822100D21C71 /* LessonController.swift in Sources */,
 				C083C9AE1B3F1088005E3CB9 /* AppDelegate.swift in Sources */,
 				C083C9EB1B41E1DA005E3CB9 /* TranscriptCell.swift in Sources */,
 				C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */,

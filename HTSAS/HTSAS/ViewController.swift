@@ -1,4 +1,4 @@
-//
+ //
 //  ViewController.swift
 //  HTSAS
 //
@@ -49,9 +49,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         if segue.identifier == "showLesson"{
             if let indexPath = self.tableView.indexPathForSelectedRow(){
                 let object: Lesson = lessons[indexPath.row + 1]!
-                let controller = segue.destinationViewController as! LessonViewController
-                controller.detailLessonItem = object
-                controller.navigationItem.title = object.title
+                if let navigation = segue.destinationViewController as? UINavigationController{
+                    if let controller = navigation.topViewController as? LessonController{
+                        controller.detailLessonItem = object
+                        controller.navigationItem.title = object.title
+                    }
+                }
+                
             }
             
         }
