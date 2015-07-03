@@ -10,6 +10,7 @@ import UIKit
 import MediaPlayer
 import XCDYouTubeKit
 import Social
+import CryptoSwift
 
 class LessonController: UITableViewController {
 
@@ -117,8 +118,9 @@ class LessonController: UITableViewController {
             tableView.setEditing(false, animated: true)
             
             // Saving
+            println(data.caption!.md5()!)
             let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(data as? AnyObject, forKey: data.caption!)
+            defaults.setObject(data as? AnyObject, forKey: data.caption!.md5()!)
         }
         
         done.backgroundColor = UIColor(red: 253.0/255.0, green: 92.0/255.0, blue: 99.0/255.0, alpha: 1.0)
