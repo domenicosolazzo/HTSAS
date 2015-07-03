@@ -115,6 +115,10 @@ class LessonController: UITableViewController {
             action.backgroundColor = UIColor(red: 2.0/255.0, green: 192.0/255.0, blue: 99.0/255.0, alpha: 1.0)
 
             tableView.setEditing(false, animated: true)
+            
+            // Saving
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(data as? AnyObject, forKey: data.caption!)
         }
         
         done.backgroundColor = UIColor(red: 253.0/255.0, green: 92.0/255.0, blue: 99.0/255.0, alpha: 1.0)
