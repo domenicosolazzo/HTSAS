@@ -9,6 +9,7 @@
 import UIKit
 import MediaPlayer
 import XCDYouTubeKit
+import Social
 
 class LessonController: UITableViewController {
 
@@ -80,10 +81,28 @@ class LessonController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
-        
+        var data: LessonTranscript = self.transcripts[indexPath.row]
+
         let delete = UITableViewRowAction(style: .Normal, title: "Share") { action, index in
             println("share")
             tableView.setEditing(false, animated: true)
+            
+            let serviceType = SLServiceTypeTwitter
+            if SLComposeViewController.isAvailableForServiceType(serviceType){
+                let controller = SLComposeViewController(forServiceType: serviceType)
+                // Set the initial text
+                controller.setInitialText("\(data.caption!) by @startuppio #startups #startup")
+                // Completion Handler
+                controller.completionHandler = {(result: SLComposeViewControllerResult) in
+                    println("Completed")
+                    println("Result: \(result)")
+                }
+                
+                self.presentViewController(controller, animated: true, completion: nil)
+            }else{
+                println("Twitter service is not available")
+            }
+
         }
         
         delete.backgroundColor = UIColor.grayColor()
