@@ -18,7 +18,6 @@
 		C083C9C71B3F1088005E3CB9 /* HTSASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9C61B3F1088005E3CB9 /* HTSASTests.swift */; };
 		C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */; };
 		C083C9D91B402F3B005E3CB9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C083C9D81B402F3B005E3CB9 /* Podfile */; };
-		C083C9E51B406453005E3CB9 /* Transcripts in Resources */ = {isa = PBXBuildFile; fileRef = C083C9E41B406453005E3CB9 /* Transcripts */; };
 		C083C9E91B406635005E3CB9 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9E81B406635005E3CB9 /* LessonModel.swift */; };
 		C083C9EB1B41E1DA005E3CB9 /* TranscriptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		C083C9D21B3F2117005E3CB9 /* HTSASLesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTSASLesson.swift; sourceTree = "<group>"; };
 		C083C9D81B402F3B005E3CB9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C083C9DA1B403E04005E3CB9 /* HTSAS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTSAS-Bridging-Header.h"; sourceTree = "<group>"; };
-		C083C9E41B406453005E3CB9 /* Transcripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Transcripts; sourceTree = "<group>"; };
 		C083C9E81B406635005E3CB9 /* LessonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LessonModel.swift; path = Models/LessonModel.swift; sourceTree = "<group>"; };
 		C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				C083C9E61B4065B9005E3CB9 /* Models */,
-				C083C9E41B406453005E3CB9 /* Transcripts */,
 				C083C9AD1B3F1088005E3CB9 /* AppDelegate.swift */,
 				C083C9B21B3F1088005E3CB9 /* ViewController.swift */,
 				C083C9B41B3F1088005E3CB9 /* Main.storyboard */,
@@ -255,7 +252,6 @@
 				C083C9BB1B3F1088005E3CB9 /* LaunchScreen.xib in Resources */,
 				C083C9D91B402F3B005E3CB9 /* Podfile in Resources */,
 				C083C9B81B3F1088005E3CB9 /* Images.xcassets in Resources */,
-				C083C9E51B406453005E3CB9 /* Transcripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
