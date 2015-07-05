@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Load data
     func loadData(){
-        for index in 1...20 {
+        for index in 1...2 {
             var lesson = self.readJson(String(index), ofType: "json", inDirectory: "Transcripts/HTSAS")
             lessons.append(lesson)
         }

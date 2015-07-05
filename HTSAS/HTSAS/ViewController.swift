@@ -37,9 +37,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("lessonCell", forIndexPath: indexPath) as! UITableViewCell
         
-        var data: Lesson = lessons[indexPath.row + 1]!
+        var data: Lesson = lessons[indexPath.row]!
         cell.textLabel!.text = data.title
-        cell.detailTextLabel!.text = data.authors
+        //cell.detailTextLabel!.text = data.authors
         
         return cell
     }
@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showLesson"{
             if let indexPath = self.tableView.indexPathForSelectedRow(){
-                let object: Lesson = lessons[indexPath.row + 1]!
+                let object: Lesson = lessons[indexPath.row]!
                 if let navigation = segue.destinationViewController as? UINavigationController{
                     if let controller = navigation.topViewController as? LessonController{
                         controller.detailLessonItem = object

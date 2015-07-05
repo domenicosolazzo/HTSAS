@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Domenico Solazzo. All rights reserved.
 //
 
-import JSONJoy
+import SwiftyJSON
 
 struct LessonTranscript {
     var author: String?
@@ -15,38 +15,54 @@ struct LessonTranscript {
         
     }
     
-    init(_ decoder: JSONDecoder) {
-        author = decoder["author"].string
-        caption = decoder["caption"].string
+    init(data: JSON) {
+        author = data["author"].string
+        caption = data["caption"].string
+    }
+}
+struct Author {
+    var name:String?
+    var slide:String?
+    
+    init(data: JSON) {
+        name = data["name"].string
+        slide = data["slide"].string
     }
 }
 
 struct Lesson {
     var transcripts:Array<LessonTranscript>?
+    var authors: Array<Author>?
     var youtubeID: String?
-    var authors: String?
     var title: String?
-    var id: Int?
+    var website: String?
+    var lessonType: String?
+    var id:String?
+    
     init() {
         
     }
     
     init(data:AnyObject){
-        self.init(JSONDecoder(data))
-    }
-    
-    init(_ decoder: JSONDecoder) {
-        id = decoder["id"].integer
-        youtubeID = decoder["y_id"].string
-        authors = decoder["authors"].string
-        title = decoder["title"].string
-        if let transcrs = decoder["transcripts"].array {
-            transcripts = Array<LessonTranscript>()
-            for transcriptDecoder in transcrs {
-                transcripts?.append(LessonTranscript(transcriptDecoder))
-            }
+        let jsonData = JSON(data)
+        youtubeID = jsonData["youtube_video"].string
+        title = jsonData["title"].string
+        website = jsonData["website"].string
+        lessonType = jsonData["type"].string
+        id = jsonData["id"].string
+        authors = Array<Author>()
+        transcripts = Array<LessonTranscript>()
+        for (key: String, subJson: JSON) in jsonData["authors"] {
+            var author = Author(data: subJson)
+            authors?.append(author)
+        }
+        
+        for (index: String, subJson: JSON) in jsonData["data"] {
+            var transcript = LessonTranscript(data: subJson)
+            transcripts?.append(transcript)
         }
     }
+    
 }
 
 struct Lessons{
@@ -60,12 +76,9 @@ struct Lessons{
         lessons.append(lesson)
     }
     
-    subscript(index:Int) -> Lesson?{
+    subscript(index:Int) ->Lesson?{
         var result: Lesson?
-        var filteredLessons = lessons.filter{ $0.id! == index }
-        if filteredLessons.count > 0{
-            result = filteredLessons[0]
-        }
+        result = lessons[index]
         return result
     }
     

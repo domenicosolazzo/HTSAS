@@ -8,6 +8,7 @@ pod "AFNetworking", "~> 2.0"
 pod "XCDYouTubeKit", "~> 2.2.0"
 pod "JSONJoy-Swift", "~> 0.9.1"
 pod 'CryptoSwift'
+pod 'SwiftyJSON', '~> 2.2.0'
 end
 
 target 'HTSASTests' do
