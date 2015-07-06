@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         var data: Lesson = lessons[indexPath.row]!
         cell.textLabel!.text = data.title
-        //cell.detailTextLabel!.text = data.authors
+        //cell.detailTextLabel!.text = data.
         
         return cell
     }

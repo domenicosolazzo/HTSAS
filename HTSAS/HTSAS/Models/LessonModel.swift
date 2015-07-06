@@ -43,8 +43,8 @@ struct Lesson {
         
     }
     
-    init(data:AnyObject){
-        let jsonData = JSON(data)
+    init(data:NSData){
+        let jsonData = JSON(data:data)
         youtubeID = jsonData["youtube_video"].string
         title = jsonData["title"].string
         website = jsonData["website"].string

@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let thisBundle: NSBundle  = NSBundle(forClass: self.classForCoder)
         let path = thisBundle.pathForResource(filename, ofType: ofType, inDirectory: inDirectory)
         let jsonData: AnyObject? = NSData.dataWithContentsOfMappedFile(path!)
-        var lesson = Lesson(data: jsonData!)
+        var lesson = Lesson(data: jsonData! as! NSData)
         return lesson
     }
     // MARK: - Core Data stack
