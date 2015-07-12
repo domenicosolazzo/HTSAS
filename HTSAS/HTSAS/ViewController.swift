@@ -39,7 +39,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         var data: Lesson = lessons[indexPath.row]!
         cell.textLabel!.text = data.title
-        //cell.detailTextLabel!.text = data.
+        
+        var authors = ", ".join(data.authors!.map({$0.name!}))
+        cell.detailTextLabel!.text = authors
         
         return cell
     }

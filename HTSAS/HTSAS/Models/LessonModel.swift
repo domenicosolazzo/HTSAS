@@ -62,7 +62,7 @@ struct Lesson {
             transcripts?.append(transcript)
         }
     }
-    
+
 }
 
 struct Lessons{
