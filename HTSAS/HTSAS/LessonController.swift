@@ -180,4 +180,22 @@ class LessonController: UITableViewController {
     }
     
 
+    //- MARK: CoreData
+    func saveFavorite(transcript:LessonTranscript){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let entity = NSEntityDescription.entityForName("Favorite", inManagedObjectContext: managedContext)
+        
+        let favorite = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        favorite.setValue(transcript.caption!, forKey: "quote")
+        favorite.setValue(transcript.caption!.md5(), forKey: "id")
+        
+        var error: NSError?
+        if !managedContext.save(&error) {
+            println("Could not save \(error), \(error?.userInfo)")
+        }
+    }
 }
