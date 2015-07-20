@@ -11,6 +11,7 @@ import MediaPlayer
 import XCDYouTubeKit
 import Social
 import CryptoSwift
+import CoreData
 
 class LessonController: UITableViewController {
 
