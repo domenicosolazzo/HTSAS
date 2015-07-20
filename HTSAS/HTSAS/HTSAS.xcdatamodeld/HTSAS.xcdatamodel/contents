@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Favorites" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Favorite" syncable="YES">
+        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="quote" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Favorites" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>

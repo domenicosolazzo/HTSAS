@@ -126,9 +126,10 @@ class LessonController: UITableViewController {
             
             // Saving
             println(data.caption!.md5()!)
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(data as? AnyObject, forKey: data.caption!.md5()!)
-            defaults.synchronize()
+            //let defaults = NSUserDefaults.standardUserDefaults()
+            //defaults.setObject(data as? AnyObject, forKey: data.caption!.md5()!)
+            //defaults.synchronize()
+            self.saveFavorite(data)
         }
         
         done.backgroundColor = UIColor(red: 253.0/255.0, green: 92.0/255.0, blue: 99.0/255.0, alpha: 1.0)
@@ -191,11 +192,13 @@ class LessonController: UITableViewController {
         let favorite = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
         favorite.setValue(transcript.caption!, forKey: "quote")
-        favorite.setValue(transcript.caption!.md5(), forKey: "id")
+        favorite.setValue(transcript.caption!.md5()!, forKey: "id")
         
         var error: NSError?
         if !managedContext.save(&error) {
             println("Could not save \(error), \(error?.userInfo)")
+        }else{
+            println("Favorite saved! id: \(transcript.caption!.md5()!)")
         }
     }
 }
