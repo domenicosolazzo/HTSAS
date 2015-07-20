@@ -148,7 +148,7 @@
                             <outlet property="delegate" destination="ksB-RR-pyU" id="aNL-BU-uxT"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="c1D-Of-uTp"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="c1D-Of-uTp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hy-Re-VDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,11 +191,11 @@
             </objects>
             <point key="canvasLocation" x="2475" y="-295"/>
         </scene>
-        <!--HTSAS-->
+        <!--Navigation Controller-->
         <scene sceneID="JeW-hZ-eTo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cZM-jd-89d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HTSAS" id="4Ek-Ih-EON"/>
+                    <tabBarItem key="tabBarItem" badgeValue="2" systemItem="mostViewed" id="4Ek-Ih-EON"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4X-0v-Wa3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
