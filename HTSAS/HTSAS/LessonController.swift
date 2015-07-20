@@ -78,6 +78,12 @@ class LessonController: UITableViewController {
         cell.captionLabel.numberOfLines = 0
         cell.captionLabel.text = data.caption
         cell.subtitleLabel.text = data.author
+        
+        var key = data.caption!.md5()!
+        if let isFavourite: AnyObject = NSUserDefaults.standardUserDefaults().objectForKey(key) as AnyObject?{
+            cell.backgroundColor = UIColor(red: 253.0/255.0, green: 92.0/255.0, blue: 99.0/255.0, alpha: 0.05)
+        }
+        
         return cell
     }
     
@@ -121,6 +127,7 @@ class LessonController: UITableViewController {
             println(data.caption!.md5()!)
             let defaults = NSUserDefaults.standardUserDefaults()
             defaults.setObject(data as? AnyObject, forKey: data.caption!.md5()!)
+            defaults.synchronize()
         }
         
         done.backgroundColor = UIColor(red: 253.0/255.0, green: 92.0/255.0, blue: 99.0/255.0, alpha: 1.0)
