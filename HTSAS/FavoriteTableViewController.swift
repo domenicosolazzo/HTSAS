@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class FavoriteTableViewController: UITableViewController {
+class FavoriteTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     override func viewDidLoad() {
         self.title = "Favorites"
