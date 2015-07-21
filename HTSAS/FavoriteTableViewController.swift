@@ -10,7 +10,15 @@ import UIKit
 import CoreData
 
 class FavoriteTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-
+    //- MARK: Private variables
+    var frc: NSFetchedResultsController!
+    
+    //- MARK: Computed variables
+    var managedObjectContext: NSManagedObjectContext{
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+    }
+    
+    //- MARK: Initialization
     override func viewDidLoad() {
         self.title = "Favorites"
         
@@ -19,6 +27,9 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         
         // Sort descriptor
         var quoteDescriptor = NSSortDescriptor(key: "quote", ascending: true)
+        
+        fetchRequest.sortDescriptors = [quoteDescriptor]
+        
         
     }
 }
