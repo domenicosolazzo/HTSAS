@@ -37,5 +37,7 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
             cacheName: nil
         )
         
+        self.frc.delegate = self
+        
     }
 }
