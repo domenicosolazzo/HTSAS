@@ -11,4 +11,9 @@ import CoreData
 
 class FavoriteTableViewController: UITableViewController {
 
+    override func viewDidLoad() {
+        self.title = "Favorites"
+        
+        
+    }
 }
