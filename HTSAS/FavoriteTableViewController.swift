@@ -14,7 +14,11 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
     override func viewDidLoad() {
         self.title = "Favorites"
         
+        // Fetch request
         var fetchRequest = NSFetchRequest(entityName: "Favorite")
+        
+        // Sort descriptor
+        var quoteDescriptor = NSSortDescriptor(key: "quote", ascending: true)
         
     }
 }
