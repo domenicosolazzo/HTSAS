@@ -68,4 +68,22 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.endUpdates()
     }
+    
+    //- MARK: TableView
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let sectionInfo = frc.sections![section] as! NSFetchedResultsSectionInfo
+        return sectionInfo.numberOfObjects
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteCell", forIndexPath: indexPath)
+        
+        let favorite = frc.objectAtIndexPath(indexPath) as! Favorite
+        
+        cell.textLabel!.text = favorite.quote
+        cell.detailTextLabel!.text = favorite.author
+        
+        return cell
+
+    }
 }
