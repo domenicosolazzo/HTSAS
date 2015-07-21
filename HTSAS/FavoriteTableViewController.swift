@@ -30,6 +30,12 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         
         fetchRequest.sortDescriptors = [quoteDescriptor]
         
+        self.frc = NSFetchedResultsController(
+            fetchRequest: fetchRequest,
+            managedObjectContext: managedObjectContext!,
+            sectionNameKeyPath: nil,
+            cacheName: nil
+        )
         
     }
 }
