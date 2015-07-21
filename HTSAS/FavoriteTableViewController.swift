@@ -39,5 +39,14 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         
         self.frc.delegate = self
         
+        var fetchError: NSError?
+        if self.frc.performFetch(&fetchError){
+            println("Retrieved...")
+        }else{
+            if let error = fetchError{
+                println("Error: \(error)")
+            }
+        }
+        
     }
 }
