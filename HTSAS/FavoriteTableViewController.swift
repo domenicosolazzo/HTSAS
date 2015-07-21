@@ -14,6 +14,7 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
     override func viewDidLoad() {
         self.title = "Favorites"
         
+        var fetchRequest = NSFetchRequest(entityName: "Favorite")
         
     }
 }
