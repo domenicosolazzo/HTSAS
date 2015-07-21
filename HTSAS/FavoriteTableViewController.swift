@@ -32,7 +32,7 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         
         self.frc = NSFetchedResultsController(
             fetchRequest: fetchRequest,
-            managedObjectContext: managedObjectContext!,
+            managedObjectContext: managedObjectContext,
             sectionNameKeyPath: nil,
             cacheName: nil
         )
@@ -48,5 +48,24 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
             }
         }
         
+    }
+    
+    //- MARK: NSFetchedResultsControllerDelegate
+    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        if type == NSFetchedResultsChangeType.Insert{
+            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        
+        if type == NSFetchedResultsChangeType.Delete{
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.endUpdates()
     }
 }
