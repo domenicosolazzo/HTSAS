@@ -22,6 +22,7 @@
 		C083C9E91B406635005E3CB9 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9E81B406635005E3CB9 /* LessonModel.swift */; };
 		C083C9EB1B41E1DA005E3CB9 /* TranscriptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */; };
 		C0C0A9171B5E1635007F5CBD /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0A9161B5E1635007F5CBD /* FavoriteTableViewController.swift */; };
+		C0C0A9191B5F60AD007F5CBD /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0A9181B5F60AD007F5CBD /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C083C9E81B406635005E3CB9 /* LessonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LessonModel.swift; path = Models/LessonModel.swift; sourceTree = "<group>"; };
 		C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptCell.swift; sourceTree = "<group>"; };
 		C0C0A9161B5E1635007F5CBD /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		C0C0A9181B5F60AD007F5CBD /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C083C9DA1B403E04005E3CB9 /* HTSAS-Bridging-Header.h */,
 				C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */,
 				C062566F1B44822100D21C71 /* LessonController.swift */,
+				C0C0A9181B5F60AD007F5CBD /* Favorite.swift */,
 			);
 			path = HTSAS;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				C083C9AE1B3F1088005E3CB9 /* AppDelegate.swift in Sources */,
 				C083C9EB1B41E1DA005E3CB9 /* TranscriptCell.swift in Sources */,
 				C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */,
+				C0C0A9191B5F60AD007F5CBD /* Favorite.swift in Sources */,
 				C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */,
 				C083C9E91B406635005E3CB9 /* LessonModel.swift in Sources */,
 			);
