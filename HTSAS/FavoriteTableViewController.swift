@@ -81,9 +81,8 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         let favorite = frc.objectAtIndexPath(indexPath) as! Favorite
         
         cell.textLabel!.text = favorite.quote
-        cell.detailTextLabel!.text = favorite.author
         
-        return cell
+        return cell as! UITableViewCell
 
     }
 }
