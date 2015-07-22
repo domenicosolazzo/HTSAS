@@ -76,13 +76,13 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteCell", forIndexPath: indexPath) as! UITableViewCell
         
         let favorite = frc.objectAtIndexPath(indexPath) as! Favorite
         
         cell.textLabel!.text = favorite.quote
         
-        return cell as! UITableViewCell
+        return cell 
 
     }
 }

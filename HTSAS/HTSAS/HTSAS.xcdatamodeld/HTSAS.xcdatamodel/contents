@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Favorite" syncable="YES">
-        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+    <entity name="Favorite" representedClassName="Favorite" syncable="YES">
+        <attribute name="id" attributeType="String" minValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="quote" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
