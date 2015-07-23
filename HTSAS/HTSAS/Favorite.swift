@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Favorite: NSManagedObject {
+@objc(Favorite) class Favorite: NSManagedObject {
     @NSManaged var id: String
     @NSManaged var quote: String
 }
