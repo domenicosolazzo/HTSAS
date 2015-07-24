@@ -80,7 +80,12 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         
         let favorite = frc.objectAtIndexPath(indexPath) as! Favorite
         
+        let font = UIFont(name: "HelveticaNeue", size: 12.0)
+        cell.textLabel!.font = font
+        cell.textLabel!.sizeToFit()
+        cell.textLabel!.numberOfLines = 0;
         cell.textLabel!.text = favorite.quote
+        
         
         return cell 
 
