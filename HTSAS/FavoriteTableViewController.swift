@@ -98,6 +98,26 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         return height + 70.0
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        let favorite = frc.objectAtIndexPath(indexPath) as! Favorite
+        
+        let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
+            tableView.setEditing(false, animated: true)
+            
+            
+        }
+        return [delete]
+    }
+    
     func calculateHeightForString(inString:String) -> CGFloat
     {
         var messageString = inString
