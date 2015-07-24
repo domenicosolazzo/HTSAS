@@ -12,4 +12,5 @@ class IntroViewController: UIViewController {
 
     @IBOutlet weak var theScrollView: UIScrollView!
     @IBOutlet weak var startButton: UIButton!
+    var pageControl = UIPageControl(frame: CGRectMake(141, 455, 39, 37))
 }
