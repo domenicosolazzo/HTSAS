@@ -215,6 +215,10 @@
                             <constraint firstItem="xxe-8s-Yr7" firstAttribute="leading" secondItem="uK4-Uk-J9l" secondAttribute="leadingMargin" constant="-16" id="dvr-cB-EcL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="Kzt-qF-Xb0" id="eR7-C9-87e"/>
+                        <outlet property="theScrollView" destination="xxe-8s-Yr7" id="vBn-tU-5cx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oP4-Se-ZaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,4 +10,6 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
+    @IBOutlet weak var theScrollView: UIScrollView!
+    @IBOutlet weak var startButton: UIButton!
 }
