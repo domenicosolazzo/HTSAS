@@ -22,4 +22,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         theScrollView.pagingEnabled = true
         theScrollView.delegate = self
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
