@@ -40,4 +40,39 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         self.view.addSubview(pageControl)
 
     }
+    
+    //-MARK: ScrollView
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if ( scrollView.contentOffset.x > 600){
+            UIView.animateWithDuration(0.5, delay: 0,
+                usingSpringWithDamping: 0.7,
+                initialSpringVelocity: 0,
+                options: UIViewAnimationOptions.CurveEaseOut,
+                animations: {
+                    self.startButton.frame.origin.y = 492
+                    
+                },
+                completion: {finished in
+                    
+                }
+            )
+        }else{
+            UIView.animateWithDuration(0.5, delay: 0,
+                usingSpringWithDamping: 0.7,
+                initialSpringVelocity: 0,
+                options: UIViewAnimationOptions.CurveEaseOut,
+                animations: {
+                    self.startButton.frame.origin.y = 692
+                },
+                completion: {finished in
+            
+                }
+            )
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
 }
