@@ -113,7 +113,22 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
             tableView.setEditing(false, animated: true)
             
+            let favoriteToDelete = self.frc.objectAtIndexPath(indexPath) as! Favorite
             
+            self.managedObjectContext.deleteObject(favoriteToDelete)
+            
+            if favoriteToDelete.deleted{
+                var savingError: NSError?
+                
+                if self.managedObjectContext.save(&savingError){
+                    println("Successfully deleted the object")
+                } else {
+                    if let error = savingError{
+                        println("Failed to save the context with error = \(error)")
+                    }
+                }
+            }
+
         }
         return [delete]
     }
