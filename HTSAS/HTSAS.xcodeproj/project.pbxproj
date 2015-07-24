@@ -23,6 +23,7 @@
 		C083C9EB1B41E1DA005E3CB9 /* TranscriptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */; };
 		C0C0A9171B5E1635007F5CBD /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0A9161B5E1635007F5CBD /* FavoriteTableViewController.swift */; };
 		C0C0A9191B5F60AD007F5CBD /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0A9181B5F60AD007F5CBD /* Favorite.swift */; };
+		C0C0A91B1B62AD0E007F5CBD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0A91A1B62AD0E007F5CBD /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptCell.swift; sourceTree = "<group>"; };
 		C0C0A9161B5E1635007F5CBD /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewController.swift; path = ../FavoriteTableViewController.swift; sourceTree = "<group>"; };
 		C0C0A9181B5F60AD007F5CBD /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		C0C0A91A1B62AD0E007F5CBD /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				C083C9EA1B41E1DA005E3CB9 /* TranscriptCell.swift */,
 				C062566F1B44822100D21C71 /* LessonController.swift */,
 				C0C0A9181B5F60AD007F5CBD /* Favorite.swift */,
+				C0C0A91A1B62AD0E007F5CBD /* IntroViewController.swift */,
 			);
 			path = HTSAS;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				C06256701B44822100D21C71 /* LessonController.swift in Sources */,
 				C083C9AE1B3F1088005E3CB9 /* AppDelegate.swift in Sources */,
 				C083C9EB1B41E1DA005E3CB9 /* TranscriptCell.swift in Sources */,
+				C0C0A91B1B62AD0E007F5CBD /* IntroViewController.swift in Sources */,
 				C083C9B11B3F1088005E3CB9 /* HTSAS.xcdatamodeld in Sources */,
 				C0C0A9191B5F60AD007F5CBD /* Favorite.swift in Sources */,
 				C083C9D31B3F2117005E3CB9 /* HTSASLesson.swift in Sources */,
