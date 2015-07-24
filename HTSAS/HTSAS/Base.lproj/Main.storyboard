@@ -183,7 +183,7 @@
         <!--Intro View Controller-->
         <scene sceneID="i1R-Ah-Xtm">
             <objects>
-                <viewController title="Intro View Controller" id="mH7-Cx-TxW" sceneMemberID="viewController">
+                <viewController title="Intro View Controller" id="mH7-Cx-TxW" customClass="IntroViewController" customModule="HTSAS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3a0-jM-2Wz"/>
                         <viewControllerLayoutGuide type="bottom" id="s3q-cO-3bI"/>
