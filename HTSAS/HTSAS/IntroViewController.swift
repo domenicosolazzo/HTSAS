@@ -21,9 +21,23 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         theScrollView.showsHorizontalScrollIndicator = false
         theScrollView.pagingEnabled = true
         theScrollView.delegate = self
+        
+        // Configure the PageControl
+        self.configurePageControl()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    func configurePageControl(){
+        self.pageControl.numberOfPages = 3
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.orangeColor()
+        self.pageControl.pageIndicatorTintColor = UIColor(red:1, green:1, blue: 1, alpha: 1)
+        self.pageControl.currentPageIndicatorTintColor = UIColor(red: 222/255.0, green: 75/225.0, blue: 53/255.0, alpha: 0.75)
+        self.view.addSubview(pageControl)
+
     }
 }
