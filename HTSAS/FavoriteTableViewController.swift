@@ -85,4 +85,23 @@ class FavoriteTableViewController: UITableViewController, NSFetchedResultsContro
         return cell 
 
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        let favorite = frc.objectAtIndexPath(indexPath) as! Favorite
+        var height:CGFloat = self.calculateHeightForString(favorite.quote)
+        return height + 70.0
+    }
+    
+    func calculateHeightForString(inString:String) -> CGFloat
+    {
+        var messageString = inString
+        let font: UIFont? = UIFont(name: "HelveticaNeue", size: 12.0)
+        var attributes = [UIFont(): font!]
+        var attrString:NSAttributedString? = NSAttributedString(string: messageString, attributes: attributes)
+        var rect:CGRect = attrString!.boundingRectWithSize(CGSizeMake(300.0,CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context:nil )
+        var requredSize:CGRect = rect
+        return requredSize.height  //to include button's in your tableview
+        
+    }
 }
