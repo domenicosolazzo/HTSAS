@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mH7-Cx-TxW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uE7-gH-3NT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -179,50 +179,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXx-5a-G4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4872" y="-285"/>
-        </scene>
-        <!--Intro View Controller-->
-        <scene sceneID="i1R-Ah-Xtm">
-            <objects>
-                <viewController title="Intro View Controller" id="mH7-Cx-TxW" customClass="IntroViewController" customModule="HTSAS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3a0-jM-2Wz"/>
-                        <viewControllerLayoutGuide type="bottom" id="s3q-cO-3bI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uK4-Uk-J9l">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxe-8s-Yr7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzt-qF-Xb0">
-                                <rect key="frame" x="45" y="692" width="231" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Get your quotes">
-                                    <color key="titleColor" red="0.98039221759999995" green="0.98039221759999995" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uE7-gH-3NT" kind="show" id="gaO-gm-7yt"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="s3q-cO-3bI" firstAttribute="top" secondItem="xxe-8s-Yr7" secondAttribute="bottom" id="BHx-xq-Fyv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xxe-8s-Yr7" secondAttribute="trailing" constant="-16" id="aIs-Mj-kVc"/>
-                            <constraint firstItem="xxe-8s-Yr7" firstAttribute="top" secondItem="3a0-jM-2Wz" secondAttribute="bottom" constant="-20" id="d48-7L-Q7z"/>
-                            <constraint firstItem="xxe-8s-Yr7" firstAttribute="leading" secondItem="uK4-Uk-J9l" secondAttribute="leadingMargin" constant="-16" id="dvr-cB-EcL"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="startButton" destination="Kzt-qF-Xb0" id="eR7-C9-87e"/>
-                        <outlet property="theScrollView" destination="xxe-8s-Yr7" id="vBn-tU-5cx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oP4-Se-ZaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1738" y="-295"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3WP-ZT-M2Z">
