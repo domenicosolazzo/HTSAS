@@ -9,7 +9,7 @@
 
 import UIKit
 
-class IntroPageViewController: UIPageViewController {
+class IntroPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,4 +18,15 @@ class IntroPageViewController: UIPageViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    //- MARK: UIPageViewControllerDataSource
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+    
 }
