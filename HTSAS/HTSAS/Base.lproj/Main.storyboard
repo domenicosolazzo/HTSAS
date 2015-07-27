@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="4872" y="-285"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Intro Page View Controller-->
         <scene sceneID="Lvv-2X-Ucv">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="o6E-GP-u4c" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="o6E-GP-u4c" customClass="IntroPageViewController" customModule="HTSAS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiW-s5-25U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1743" y="-300"/>
